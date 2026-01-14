@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zimgro consultancy</title>
+    <!-- Favicon / Logo in tab -->
+    <!-- Favicon for browser tab -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- PNG favicons for high DPI devices -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/images/favicon-128x128.png">
+
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+    <!-- Android / Chrome icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/android-chrome-512x512.png">
+
+    <meta name="description"
+          content="ZIMGRO College in Zimbabwe teaches foreign languages like Chinese, French, Portuguese, and German with professional courses and interactive learning.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CSS -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            integrity="sha512-Q0+Ycp6R6fTxLo2VuN0w6HV7zz+q3f0qgJ0YX9iZs7OXp2yFZc77gIYoyhWQYqfhU3tOEd5hMbB7A5Fi1A+4hw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background: url('https://images.unsplash.com/photo-1596495577886-d920f38f0bfc?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .gallery-item:hover img, .video-item:hover video {
+            transform: scale(1.05);
+            transition: transform 0.5s;
+        }
+
+        .social-icon {
+            transition: transform 0.3s, background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+
+<header class="sticky top-0 z-50 w-full bg-gray-800 shadow-xl">
+    <div class="container mx-auto flex justify-between items-center px-6 py-2">
+
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+            <img src="assets/images/Zimgro%20(1).svg" alt="ZIMGRO Logo" class="h-16 md:h-20 w-auto"/>
+            <span class="text-white text-lg md:text-xl font-bold">ZIMGRO Consultant</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-8 text-lg font-medium text-yellow-500">
+            <a href="#about" class="hover:text-yellow-400 transition duration-300">About</a>
+            <a href="#courses" class="hover:text-yellow-400 transition duration-300">Courses</a>
+            <a href="#portfolio-photos" class="hover:text-yellow-400 transition duration-300">Gallery</a>
+            <a href="#portfolio-videos" class="hover:text-yellow-400 transition duration-300">Videos</a>
+            <a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-gray-200 text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-700 border-t border-gray-600 flex flex-col">
+        <a href="#about" class="block px-6 py-3 text-gray-200 hover:bg-gray-600">About</a>
+        <a href="#courses" class="block px-6 py-3 text-gray-200 hover:bg-gray-600">Courses</a>
+        <a href="#portfolio-photos" class="block px-6 py-3 text-gray-200 hover:bg-gray-600">Gallery</a>
+        <a href="#portfolio-videos" class="block px-6 py-3 text-gray-200 hover:bg-gray-600">Videos</a>
+        <a href="#contact" class="block px-6 py-3 text-gray-200 hover:bg-gray-600">Contact</a>
+    </div>
+</header>
+
+
+<script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+</script>
+
+<!-- Hero Section -->
+<section
+        class="min-h-screen relative flex items-center justify-center bg-cover bg-center"
+        style="background-image: url('assets/images/gall5.jpeg');"
+
+<!-- Overlay -->
+<div class="absolute inset-0 bg-gray-900 bg-opacity-70"></div>
+
+<!-- Hero Content -->
+<div class="relative z-10 container mx-auto px-6 text-center transform -translate-y-24 md:-translate-y-32">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight">
+        Professional Language Training<br class="hidden md:block">
+        for a Global Future
+    </h1>
+
+    <p class="text-xl md:text-2xl max-w-4xl mx-auto mb-6 text-gray-200 leading-relaxed">
+        ZIMGRO is a leading language college in Zimbabwe, dedicated to delivering
+        world-class training in Chinese, French, Portuguese, and German.
+        Our expert-led programs combine academic excellence, practical communication,
+        and cultural immersion to prepare students for international careers,
+        travel, and global opportunities.
+    </p>
+
+    <!-- Trust Line -->
+    <p class="text-sm text-gray-300 mb-10 tracking-wide uppercase">
+        Trusted by Students & Professionals Across Zimbabwe
+    </p>
+
+    <a
+            href="#courses"
+            class="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-12 rounded-full shadow-xl transition duration-300 text-lg"
+    >
+        Discover Our Courses
+    </a>
+</div>
+</section>
+
+
+<!-- About Preview Section -->
+<section id="about" class="py-20 bg-gray-50 text-center">
+    <div class="container mx-auto px-4 max-w-3xl">
+
+        <h2 class="text-4xl font-bold mb-6 text-gray-800">
+            About ZIMGRO
+        </h2>
+
+        <p class="text-lg text-gray-700 mb-8">
+            ZIMGRO is a multidisciplinary consultancy delivering internationally
+            aligned language training and professional services designed for
+            global success.
+        </p>
+
+        <button
+                onclick="openAboutModal()"
+                class="bg-gray-900 hover:bg-gray-800 text-white font-semibold py-4 px-10 rounded-full shadow-lg transition duration-300 hover:scale-105">
+            Click here
+        </button>
+
+    </div>
+</section>
+
+<!-- About Modal -->
+<div id="aboutModal"
+     class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-sm flex items-center justify-center px-4 overflow-auto transition-opacity duration-500">
+
+    <!-- Modal Container -->
+    <div id="modalContent"
+         class="relative max-w-5xl w-full overflow-hidden rounded-3xl shadow-2xl transform scale-95 opacity-0 transition-all duration-500">
+
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="assets/images/Zimgro%20(1).svg"
+                 alt="ZIMGRO Background"
+                 class="w-full h-full object-cover brightness-50">
+        </div>
+
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <!-- Modal Content -->
+        <div class="relative z-10 px-10 py-10 space-y-6">
+
+            <!-- Close Button -->
+            <button
+                    onclick="closeAboutModal()"
+                    class="absolute top-5 right-6 text-3xl text-white hover:text-gray-300 transition duration-300">
+                &times;
+            </button>
+
+            <!-- Section 1: Identity -->
+            <div class="rounded-xl">
+                <h3 class="text-2xl font-bold mb-4 text-white">Who We Are</h3>
+                <p class="text-white leading-relaxed">
+                    ZIMGRO is a Zimbabwe-based consultancy operating across language
+                    education and hospitality services. We deliver structured,
+                    internationally benchmarked programs designed to meet global
+                    academic and professional standards.
+                </p>
+            </div>
+
+            <!-- Section 2: Language Excellence -->
+            <div class="rounded-xl">
+                <h3 class="text-2xl font-bold mb-4 text-white">Language Training Excellence</h3>
+                <p class="text-white leading-relaxed">
+                    Our language programs cover beginner to advanced levels in Chinese,
+                    French, Portuguese, and German. Examinations and assessments are
+                    aligned with their countries of origin — including China for
+                    Chinese language certification — ensuring authenticity and
+                    international recognition.
+                </p>
+            </div>
+
+            <!-- Section 3: Learning Formats -->
+            <div class="rounded-xl">
+                <h3 class="text-2xl font-bold mb-4 text-white">Flexible Learning Models</h3>
+                <p class="text-white leading-relaxed">
+                    We provide group classes, one-on-one instruction, online learning,
+                    and face-to-face sessions tailored to students, professionals,
+                    and organizations seeking flexibility and effectiveness.
+                </p>
+            </div>
+
+            <!-- Section 4: Strength & Scope -->
+            <div class="rounded-xl">
+                <h3 class="text-2xl font-bold mb-4 text-white">Our Strength & Scope</h3>
+                <p class="text-white leading-relaxed">
+                    ZIMGRO’s strength lies in excellence across curriculum design,
+                    instruction quality, assessment standards, and learner support.
+                    Beyond education, we also operate hospitality and restaurant
+                    services, reflecting our diverse consultancy portfolio.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal Script -->
+<script>
+    const modal = document.getElementById("aboutModal");
+    const modalContent = document.getElementById("modalContent");
+
+    // Open modal
+    function openAboutModal() {
+        modal.classList.remove("hidden");
+        setTimeout(() => {
+            modalContent.classList.remove("scale-95", "opacity-0");
+        }, 50);
+    }
+
+    // Close modal
+    function closeAboutModal() {
+        modalContent.classList.add("scale-95", "opacity-0");
+        setTimeout(() => {
+            modal.classList.add("hidden");
+        }, 300);
+    }
+
+    // Close when clicking outside content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeAboutModal();
+    });
+</script>
+
+
+<!-- Courses Section -->
+<section id="courses" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-10">Our Chinese Courses</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Card 1: Chinese Language Intro -->
+            <div class="p-6 bg-gray-800 text-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                <h3 class="text-2xl font-semibold mb-2">Chinese Language</h3>
+                <p>Learn Mandarin Chinese with modern teaching methods and interactive resources.</p>
+            </div>
+
+            <!-- Card 2: Advantages -->
+            <div class="p-6 bg-gray-800 text-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                <h3 class="text-2xl font-semibold mb-2">Advantages</h3>
+                <ul class="list-disc list-inside text-white text-left">
+                    <li>Boost global business opportunities</li>
+                    <li>Enhance travel & cultural understanding</li>
+                    <li>Competitive edge with Chinese/Asian investors in Zimbabwe</li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Learning Models -->
+            <div class="p-6 bg-gray-800 text-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                <h3 class="text-2xl font-semibold mb-2">Learning Models</h3>
+                <ul class="list-disc list-inside text-white text-left">
+                    <li>Group Classes</li>
+                    <li>One-on-One Instruction</li>
+                    <li>Online Learning</li>
+                    <li>Face-to-Face Sessions</li>
+                </ul>
+            </div>
+
+            <!-- Card 4: Session Timings -->
+            <div class="p-6 bg-gray-800 text-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                <h3 class="text-2xl font-semibold mb-2">Session Timings</h3>
+                <ul class="list-disc list-inside text-white text-left">
+                    <li>Morning Sessions</li>
+                    <li>Afternoon Sessions</li>
+                    <li>Evening Sessions</li>
+                </ul>
+            </div>
+
+            <!-- Card 5: Business Advantage -->
+            <div class="p-6 bg-gray-800 text-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                <h3 class="text-2xl font-semibold mb-2">Business Advantage</h3>
+                <p>Learning Chinese positions you for opportunities with Chinese and Asian investors in Zimbabwe,
+                    boosting your career and business prospects.</p>
+            </div>
+
+            <!-- Card 6: Certification / Exams -->
+            <div class="p-6 bg-gray-800 text-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                <h3 class="text-2xl font-semibold mb-2">Certification</h3>
+                <ul class="list-disc list-inside text-white text-left">
+                    <li>Official Mandarin Chinese certificates</li>
+                    <li>Aligned with China’s language standards</li>
+                    <li>Beginner to Advanced levels</li>
+                </ul>
+            </div>
+
+            <!-- Card 7: Support & Resources -->
+            <div class="p-6 bg-gray-800 text-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                <h3 class="text-2xl font-semibold mb-2">Support & Resources</h3>
+                <ul class="list-disc list-inside text-white text-left">
+                    <li>Multimedia learning resources</li>
+                    <li>Experienced instructors</li>
+                    <li>Continuous learner support</li>
+                </ul>
+            </div>
+
+            <!-- Card 8: Cultural & Career Opportunities -->
+            <div class="p-6 bg-gray-800 text-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                <h3 class="text-2xl font-semibold mb-2">Cultural & Career Opportunities</h3>
+                <ul class="list-disc list-inside text-white text-left">
+                    <li>Cultural immersion activities</li>
+                    <li>Networking with Chinese businesses</li>
+                    <li>Career advancement in trade, business, and education</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Portfolio - Photos Section -->
+<section id="portfolio-photos" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-10 text-white">Gallery - Photos</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Photo 1 -->
+            <div class="overflow-hidden rounded-xl shadow-2xl bg-gray-900 group">
+                <img src="assets/images/wall2.jpeg"
+                     alt="Classroom learning"
+                     class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="overflow-hidden rounded-xl shadow-2xl bg-gray-900 group">
+                <img src="assets/images/photo1.jpeg"
+                     alt="Students discussion"
+                     class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="overflow-hidden rounded-xl shadow-2xl bg-gray-900 group">
+                <img src="assets/images/gall3.jpeg"
+                     alt="Language books"
+                     class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+
+            <!-- Photo 1 -->
+            <div class="overflow-hidden rounded-xl shadow-2xl bg-gray-900 group">
+                <img src="assets/images/gall1.jpeg"
+                     alt="Classroom learning"
+                     class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="overflow-hidden rounded-xl shadow-2xl bg-gray-900 group">
+                <img src="assets/images/gall2.jpeg"
+                     alt="Students discussion"
+                     class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="overflow-hidden rounded-xl shadow-2xl bg-gray-900 group">
+                <img src="assets/images/gall5.jpeg"
+                     alt="Language books"
+                     class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Portfolio - Videos Section -->
+<section id="portfolio-videos" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-10">Videos</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <!-- Video 1 -->
+            <div class="video-item overflow-hidden rounded-lg shadow-lg">
+                <video controls class="w-full h-auto rounded-lg">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                            type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-item overflow-hidden rounded-lg shadow-lg">
+                <video controls class="w-full h-auto rounded-lg">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                            type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Font Awesome Free CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-800 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-10">Get in Touch</h2>
+        <p class="mb-8 text-lg max-w-2xl mx-auto">
+            Connect with ZIMGRO College on social media or reach out directly via
+            email or phone. We’re here to help you start your language learning journey!
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center space-x-6 mb-10">
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=61586519644149" target="_blank"
+               class="bg-white text-blue-600 p-6 rounded-full shadow-lg hover:bg-blue-600 hover:text-white transition duration-300">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/zimgro6/?hl=en" target="_blank"
+               class="bg-white text-pink-500 p-6 rounded-full shadow-lg hover:bg-pink-500 hover:text-white transition duration-300">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- YouTube -->
+            <a href="youtube.com/channel/UCz657IURweA1su6v-dJxSWw" target="_blank"
+               class="bg-white text-red-600 p-6 rounded-full shadow-lg hover:bg-red-600 hover:text-white transition duration-300">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/263 78 640 9822" target="_blank"
+               class="bg-white text-green-500 p-6 rounded-full shadow-lg hover:bg-green-500 hover:text-white transition duration-300">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <!-- TikTok -->
+            <a href="www.tiktok.com/@zimgroconsultancy0" target="_blank"
+               class="bg-white text-black p-6 rounded-full shadow-lg hover:bg-black hover:text-white transition duration-300">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+        </div>
+
+        <!-- Contact Info -->
+        <div class="w-full max-w-6xl mx-auto bg-gray-200 rounded-xl shadow-lg p-8 flex flex-col md:flex-row md:justify-between md:space-x-8 space-y-6 md:space-y-0">
+
+            <!-- Email Section -->
+            <div class="flex flex-col bg-white rounded-lg shadow-md p-6 flex-1">
+                <!-- Menu Header -->
+                <div class="flex items-center mb-4">
+                    <span class="text-yellow-500 text-2xl mr-2">📧</span>
+                    <h4 class="font-bold text-gray-800 text-lg">Email</h4>
+                </div>
+                <!-- Content -->
+                <a href="mailto:info@zimgro.com" class="text-gray-700 hover:underline text-base">
+                    info@zimgro.com
+                </a>
+            </div>
+
+            <!-- Phone Section -->
+            <div class="flex flex-col bg-white rounded-lg shadow-md p-6 flex-1">
+                <!-- Menu Header -->
+                <div class="flex items-center mb-4">
+                    <span class="text-yellow-500 text-2xl mr-2">📞</span>
+                    <h4 class="font-bold text-gray-800 text-lg">Phone</h4>
+                </div>
+                <!-- Content -->
+                <div class="text-gray-700 text-base">
+                    +263 78 640 9822<br>
+                    +263 77 333 1861<br>
+                    +263 77 943 7116
+                </div>
+            </div>
+
+            <!-- Address Section -->
+            <div class="flex flex-col bg-white rounded-lg shadow-md p-6 flex-1">
+                <!-- Menu Header -->
+                <div class="flex items-center mb-4">
+                    <span class="text-yellow-500 text-2xl mr-2">🌍</span>
+                    <h4 class="font-bold text-gray-800 text-lg">Address</h4>
+                </div>
+                <!-- Content -->
+                <div class="text-gray-700 text-base">
+                    ZIMGRO Language Consultancy<br>
+                    4th Floor, Globe House<br>
+                    CNR J Moyo and Angwa<br>
+                    Harare, Zimbabwe
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-200 text-gray-800 py-6 text-center">
+    <p>© 2026 ZIMGRO Consultancy. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
